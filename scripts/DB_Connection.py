@@ -2,23 +2,13 @@ import pandas as pd
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
 import os
-
 # Load environment variables from .env file
 load_dotenv()
 
 def fetch_xdr_data():
     """
-    Fetch data from the 'xdr_data' table in the PostgreSQL database.
+    Fetch data from the 'xdr_data' table in the PostgreSQL database.    
     
-    Returns
-    -------
-    pd.DataFrame
-        The data fetched from the database as a Pandas DataFrame.
-    
-    Raises
-    ------
-    Exception
-        If any error occurs during the database connection or data retrieval.
     """
     # Get the database URL from environment variables
     DATABASE_URL = os.getenv('DATABASE_URL')
