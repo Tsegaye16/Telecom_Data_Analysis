@@ -6,8 +6,14 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+<<<<<<< HEAD
 import plotly.io as pio
 from IPython.display import Image
+=======
+from IPython.display import Image
+import plotly.io as pio
+
+>>>>>>> d25ecfff1dfb4d6cfed481a596f55742dac195f3
 
 def format_float(value):
     return "{:.2f}".format(value)
