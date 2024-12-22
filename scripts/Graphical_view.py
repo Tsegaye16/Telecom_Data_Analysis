@@ -7,8 +7,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-import plotly.io as pio
-from IPython.display import Image
+
 
 from IPython.display import Image
 import plotly.io as pio
