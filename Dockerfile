@@ -1,16 +1,20 @@
-FROM python:3.9-slim
+FROM python:3.10-slim
 
-# Set the working directory
+# Install system dependencies for ta-lib and other build tools
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    wget \
+    libatlas-base-dev \
+    && apt-get clean
+
 WORKDIR /app
 
-# Copy the requirements.txt file
+# Copy and install Python dependencies
 COPY requirements.txt .
+RUN pip install --no-cache-dir --upgrade pip
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Install the dependencies listed in the requirements file
-RUN pip install -r requirements.txt
-
-# Copy the application source code into the container
+# Copy application source code
 COPY / .
 
-# Specify the command to run the application
 CMD ["python", "app.py"]
