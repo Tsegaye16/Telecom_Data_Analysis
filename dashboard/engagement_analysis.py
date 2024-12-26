@@ -32,7 +32,7 @@ def create_clustered_user_scatter(data, x_col, y_col):
         data,
         x=x_col,
         y=y_col,
-        color="cluster",  # Use 'cluster' column for grouping
+        color="Cluster",  # Use 'cluster' column for grouping
         title="Clustered User Engagement",
         labels={x_col: "Time Duration (ms)", y_col: "Total UL and DL (bytes)"},
         color_continuous_scale="Viridis"
